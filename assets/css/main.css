@@ -1981,7 +1981,7 @@ input, select, textarea {
 				-webkit-align-items: center;
 				-ms-align-items: center;
 				align-items: center;
-				text-align: center;
+				text-align: left;
 			}
 
 				#main > .panel.intro .pic {
@@ -2265,18 +2265,49 @@ input, select, textarea {
 	max-height: 99em;
 	transition: max-height 0.5s ease-in-out;
 }
+/* Project headings and descriptions */
+.project-name h3 {
+	font-size: large;
+	display: inline-block;
+	margin-left: 15px;
+}
+.project-name a {
+	float: left;
+} 
+.project-name h4 {
+	font-style: italic;
+	font-size: medium;
+}
+.project-name h6 {
+	font-size: x-small;
+}
+.project .collapse li {
+	font-size: medium;
+	list-style: none;
+	margin-left: 25px;
+}
+.project .collapse p {
+	font-size: medium;
+}
+
+.project-details {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
 
 /* Project gallery */
 .gallery { 
-	margin: 10px 40px; 
+	align-items: center;
+	margin: 10px 10px; 
+	margin-left: -20px;
 } 
 .gallery img { 
-	width: 200px; 
-	height: 50px; 
-	transition: 1s; 
+	width: 250px; 
+	height: 200px; 
+	transition: 0.0001s; 
 	padding: 5px; 
 } 
 .gallery img:hover { 
 	filter: drop-shadow(4px 4px 6px gray); 
-	transform: scale(1.1); 
+	transform: scale(1.05); 
 } 
