@@ -1,74 +1,42 @@
+// map our commands to the classList methods
+const fnmap = {
+	'toggle': 'toggle',
+	  'show': 'add',
+	  'hide': 'remove'
+};
+const collapse = (selector, cmd) => {
+	const targets = Array.from(document.querySelectorAll(selector));
+	targets.forEach(target => {
+		target.classList[fnmap[cmd]]('show');
+	});
+}
+// Grab all the trigger elements on the page
+const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+// Listen for click events, but only on our triggers
+window.addEventListener('click', (ev) => {
+  const elm = ev.target;
+  if (triggers.includes(elm)) {
+    const selector = elm.getAttribute('data-target');
+    collapse(selector, 'toggle');
+  }
+}, false);
+// function to change the toggle icon from + to -
+function collapseIcon(iconId) {
+	const element = document.getElementById('icon' + iconId);
+	if (iconId in ['1', '2', '3', '4', '5', '6', '7']) {
+		if(element.innerHTML === '[ + ]') {
+			element.innerHTML = '[ - ]';
+		} else {
+			element.innerHTML = '[ + ]';
+		}
+	}
+};
+
 /*
 	Astral by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
-(function() {
-	// Get all the <h2> headings
-	const headings = document.querySelectorAll('main h2')
-	
-	Array.prototype.forEach.call(headings, heading => {
-	  // Give each <h2> a toggle button child
-	  // with the SVG plus/minus icon
-	  heading.innerHTML = `
-		<button aria-expanded="false">
-		  ${heading.textContent}
-		  <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-			<rect class="vert" height="8" width="2" y="1" x="4"/>
-			<rect height="2" width="8" y="4" x="1"/>
-		  </svg>
-		</button>
-	  `
-	  
-	  // Function to create a node list 
-	  // of the content between this <h2> and the next
-	  const getContent = (elem) => {
-		let elems = []
-		while (elem.nextElementSibling && elem.nextElementSibling.tagName !== 'H2') {
-		  elems.push(elem.nextElementSibling)
-		  elem = elem.nextElementSibling
-		}
-		
-		// Delete the old versions of the content nodes
-		elems.forEach((node) => {
-		  node.parentNode.removeChild(node)
-		})
-  
-		return elems
-	  }
-	  
-	  // Assign the contents to be expanded/collapsed (array)
-	  let contents = getContent(heading)
-	  
-	  // Create a wrapper element for `contents` and hide it
-	  let wrapper = document.createElement('div')
-	  wrapper.hidden = true
-	  
-	  // Add each element of `contents` to `wrapper`
-	  contents.forEach(node => {
-		wrapper.appendChild(node)
-	  })
-	  
-	  // Add the wrapped content back into the DOM 
-	  // after the heading
-	  heading.parentNode.insertBefore(wrapper, heading.nextElementSibling)
-	  
-	  // Assign the button
-	  let btn = heading.querySelector('button')
-	  
-	  btn.onclick = () => {
-		// Cast the state as a boolean
-		let expanded = btn.getAttribute('aria-expanded') === 'true' || false
-		
-		// Switch the state
-		btn.setAttribute('aria-expanded', !expanded)
-		// Switch the content's visibility
-		wrapper.hidden = expanded    
-	  }
-	})
-})();
-
 (function($) {
 
 	var $window = $(window),

@@ -2250,46 +2250,33 @@ input, select, textarea {
     -webkit-animation-direction: normal, alternate;
     animation-direction: normal, alternate;
 }
-main {
-	border-width: 2px 0;
-	border-style: solid;
-  }
-  
-  main h2 {
-	margin: 0;
-  }
-  
-  main > div + h2 {
-	border-top: 2px solid;
-  }
-  
-  h2 button {
-	all: inherit;
-	border: 0;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	padding: 0.5em 0;
-  }
-  main h2 button:hover {
-	  color: transparent;
-  }
-  
-  
-  h2 button:focus svg {
-	outline: 2px solid;
-  }
-  
-  button svg {
-	height: 1em;
-	margin-left: 0.5em;
-  }
-  
-  [aria-expanded="true"] .vert {
-	display: none;
-  }
-  
-  [aria-expanded] rect {
-	fill: currentColor;
-  }
-  
+
+/* Project collapse icon */
+::after, ::before {
+	box-sizing: border-box;
+}
+.collapse {
+	display: block;
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+.collapse.show {
+	max-height: 99em;
+	transition: max-height 0.5s ease-in-out;
+}
+
+/* Project gallery */
+.gallery { 
+	margin: 10px 40px; 
+} 
+.gallery img { 
+	width: 200px; 
+	height: 50px; 
+	transition: 1s; 
+	padding: 5px; 
+} 
+.gallery img:hover { 
+	filter: drop-shadow(4px 4px 6px gray); 
+	transform: scale(1.1); 
+} 
