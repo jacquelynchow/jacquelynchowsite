@@ -1,4 +1,13 @@
-#Personal Website 
+# Personal Website 
+*Link:* https://jacquelynchow.netlify.app
+*Description:* My personal website using HTML5UP's Astral template and my own customizations.
 
-- based on Astral by HTML5 UP with some of my own adjustments
-- created during Enlight Cohort #2
+# Languages
+- HTML
+- CSS
+- Javascript
+
+# Features
+- Toggle feature on projects page
+- Button bounces on hover
+- Images all taken by me
