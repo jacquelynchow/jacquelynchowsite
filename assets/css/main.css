@@ -1501,7 +1501,7 @@ input, select, textarea {
 	header {
 		margin: 0 0 1.5em 0;
 	}
-
+	
 		header > p {
 			margin: 0.5em 0 0 0;
 			color: #aaa;
@@ -2133,7 +2133,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		color: rgba(255, 255, 255, 0.45);
+		color: #fdfcfc;
 		text-align: center;
 		padding: 2em 0 0 0;
 		font-size: 0.75em;
@@ -2260,6 +2260,7 @@ input, select, textarea {
 	max-height: 0px;
 	overflow: hidden;
 	transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+	color: #222222;
 }
 .collapse.show {
 	max-height: 99em;
@@ -2268,31 +2269,63 @@ input, select, textarea {
 /* Project headings and descriptions */
 .project-name h3 {
 	font-size: large;
-	display: inline-block;
-	margin-left: 15px;
 }
 .project-name a {
 	float: left;
+	font-size: small;
 } 
 .project-name h4 {
 	font-style: italic;
 	font-size: medium;
+	margin-bottom: -5px;
 }
 .project-name h6 {
 	font-size: x-small;
 }
 .project .collapse li {
-	font-size: medium;
+	font-size: small;
 	list-style: none;
 	margin-left: 25px;
+	margin-bottom: -5px;
 }
 .project .collapse p {
 	font-size: medium;
 }
-
 .project-details {
 	margin-top: 5px;
 	margin-bottom: 0px;
+}
+.inline {
+	display: inline-block;
+	margin-left: 15px;
+}
+.enlight-projects {
+	margin-left: 25px;
+}
+.fifth, .sixth, .seventh, .eigth {
+	margin-bottom: 10px;
+	margin-left: 50px;
+}
+.enlight-project-name {
+	margin-bottom: -10px;
+}
+.enlight-project a {
+	font-size: small;
+}
+.enlight-project h4 {
+	font-size: 15px;
+	font-style: italic;
+	margin-bottom: 0px;
+}
+.fourth .responsibilities {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.link-bg {
+	background-color: rgba(247, 157, 150, 0.3);
+	border-radius: 10px;
+	color: #fdfcfc;
+	box-shadow: 4px 5px 3px rgba(254, 95, 85, 0.7);
 }
 
 /* Project gallery */
