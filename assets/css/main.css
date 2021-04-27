@@ -2310,6 +2310,7 @@ input, select, textarea {
 	margin-left: 50px;
 }
 .enlight-project-name {
+	font-weight: 600;
 	margin-bottom: -10px;
 }
 .enlight-project a {
