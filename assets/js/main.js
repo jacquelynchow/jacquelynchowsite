@@ -22,7 +22,7 @@ window.addEventListener('click', (ev) => {
 }, false);
 // function to change the toggle icon from + to -
 function collapseIcon(iconId) {
-	const numsList = Array.from({length: 13}, (_, i) => i + 1)
+	const numsList = Array.from({length: 16}, (_, i) => i + 1)
 	//=> [1, 2, ..., length]
 	const element = document.getElementById('icon' + iconId);
 	if (iconId in numsList) {

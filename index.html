@@ -69,7 +69,7 @@
 							<h2>About</h2>
 						</header>
 						<p>I am a first-generation Indonesian-Chinese student studying <em>Computer Science</em> and <em>Psychology</em> at Swarthmore College. 
-							<br><br>Currently, I reside in Philadelphia, PA. I enjoy coding fun projects and coming up with project ideas. 
+							<br><br>I'm based in Philadelphia, PA. I enjoy coding fun projects and coming up with fun project ideas. 
 							My hobbies include doing faux calligraphy, printmaking, photography, traveling, cooking, and learning (coding and spoken) languages.
 						</p>
 					</article>
@@ -87,13 +87,18 @@
 									<img height="45" width="75" style="margin-bottom:-15px; margin-left: -5px;" src="https://stashlogo.s3.amazonaws.com/stash-transparent.png" alt="Stash logo" />
 									<span style="font-weight: 600;">(CS71) SWE Project: Stash</span> [Class Project]
 								</h3>
-								<h4>ReactNative, Cloud Firestore (Firebase), Git, Figma</h4>
+								<h4>ReactNative, Cloud Firestore (Firebase), Expo, Figma</h4>
 							</div>
 							<div class="collapse thirteenth">
 								<p class="project-details" style="font-size: 13px">
-									Link to Github Repo for a more detailed ReadMe: (Swarthmore College enterprise GitHub link)
-									<a target="_blank" rel="noopener noreferrer" class="hvr-icon-bob platform_link github fa-2x" href="https://github.swarthmore.edu/lrich1/cs71SoftwareProjectGroup2">
+									Link to Github Repo for a more detailed ReadMe:
+									<a target="_blank" rel="noopener noreferrer" class="hvr-icon-bob platform_link github fa-2x" href="https://github.com/jacquelynchow/stash">
 										<i class="hvr-icon fa fa-github" aria-hidden="true"></i>
+									</a>
+									<br>
+									Link to Slide Deck:
+									<a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1MV0Rb61IhSQkhuT-Qmkue5eBsAkDTip_9vufj5w-zDs/edit?usp=sharing">
+										Stash Slide Deck
 									</a>
 								</p>
 								<div class="responsibilities" style="padding-bottom: 5px;">
@@ -103,8 +108,38 @@
 										songs, movies, books, YouTube videos and other media your friends send you into one convenient dashboard, so you never lose track of what they 
 										share with you again. You can create groups to share recommendations with, sort the recommendations you’ve received by sender or by media type, 
 										and react to what was sent to you, all on the same platform.</li>
-									<li>🔆&emsp;Responsibilities: Still in the works! Coming soon :)
-									</li>				
+									<a onClick="collapseIcon(14)" class="plusIcon link-bg stash-plus" id="icon14" data-toggle="collapse" data-target=".collapse.fourteenth" data-text="Collapse">
+										[ + ]
+									</a> 
+									<p class="stash-responsibilities">Design & Frontend:</p>
+									<div class="collapse fourteenth">
+										<ul>
+											<li>• Designed majority of the Figma designs</li>
+											<li>• Drew up the Stash logo, splash screen, and onboarding screen icons using ProCreate</li>
+											<li>• Worked out the mechanism of React Modals (pop up feature), designs and structure for ‘Create a Pod’, ‘Add a Recommendation’, and ‘Show Group Members’ pop ups, pod card design (also later used for our recommendation card design), the different designs for the media-type components, etc</li>
+										</ul>
+									</div>
+									<a onClick="collapseIcon(15)" class="plusIcon link-bg stash-plus" id="icon15" data-toggle="collapse" data-target=".collapse.fifteenth" data-text="Collapse">
+										[ + ]
+									</a> 
+									<p class="stash-responsibilities">Backend:</p>
+									<div class="collapse fifteenth">
+										<ul>
+											<li>• Worked out the structure of the asynchronous callback function for getPods (which was later also used in getRecs) to get new pod data on refresh</li>
+											<li>• <span style="font-weight: 600;">Firebase-related: </span>Add pods to the database, connecting the navigation between the ByPod page to individual Pod pages 
+												(i.e. showing the respective pods for a specific user), sending resized pod images to the database and retrieving their download URLs, 
+												deleting pod images (if a new one was chosen), connecting the relationship between recommendations and pods in the database 
+												(i.e. showing the respective recommendations for a specific pod), getting the list of usernames from the database according to a user’s search input, 
+												and deleting a recommendation from the database.
+											</li>
+											<li>• <span style="font-weight: 600;">Other Miscellaneous: </span>Logout feature, various error checks based on user input on ‘Create a Pod’ submit  
+												(i.g. usernames are not added twice to a new pod, pod names/recommendation names are made up of valid characters, empty fields), 
+												‘Add a Recommendation’ feature and filtering what is shown based on the type of media chosen from the dropdown menu, 
+												structure of the refresh feature, activity indicator loading screen for when images are being sent to the server or 
+												when a pod or recommendation is being created, and more
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -200,6 +235,7 @@
 									<li>🔆&emsp;Assisted over 100 members as they learn to code by answering questions on the Discord and live workshops/classes</li>					  
 								</div>
 								<div class="enlight-projects">
+									<!-- Project 1 -->
 									<a onClick="collapseIcon(5)" class="plusIcon link-bg" id="icon5" data-toggle="collapse" data-target=".collapse.fifth" data-text="Collapse">
 										[ + ]
 									</a> 
@@ -211,12 +247,12 @@
 												weather and news fetcher, Google Calendar feature, random word generator, draggable components on home page
 										</li>	
 										<li style="margin-left: 1px">🔆&emsp;<span style="font-weight: 600;">Upcoming:</span> dark mode, Regional Rails train schedule fetcher, and more</li>			  
-										
 									</div>
+									<!-- Project 2: Get Yo Weather! App -->
 									<a onClick="collapseIcon(6)" class="plusIcon link-bg" id="icon6" data-toggle="collapse" data-target=".collapse.sixth" data-text="Collapse">
 										[ + ]
 									</a> 
-									<p class="inline enlight-project-name">Weather App</p>
+									<p class="inline enlight-project-name">Get Yo Weather! App</p>
 									<div class="collapse sixth enlight-project">
 										<h4>HTML, CSS, Javascript, OpenWeatherMap API</h4>
 										<a target="_blank" rel="noopener noreferrer" href="https://get-yo-weather.netlify.app">https://get-yo-weather.netlify.app</a>
@@ -224,6 +260,7 @@
 											background image changes according to current weather conditions, toggle feature for Fahrenheit and Celsius, mobile responsive
 										</li>	
 									</div>	
+									<!-- Project 3: To Do List App -->
 									<a onClick="collapseIcon(7)" class="plusIcon link-bg" id="icon7" data-toggle="collapse" data-target=".collapse.seventh" data-text="Collapse">
 										[ + ]
 									</a>
@@ -235,10 +272,11 @@
 											toggle feature to minimize or maximize list, local storage of tasks, draggable list
 										</li>	
 									</div>
+									<!-- Project 4: Get Yo Paint On! App -->
 									<a onClick="collapseIcon(8)" class="plusIcon link-bg" id="icon8" data-toggle="collapse" data-target=".collapse.eigth" data-text="Collapse">
 										[ + ]
 									</a>
-									<p class="inline enlight-project-name">Web Paint App</p>
+									<p class="inline enlight-project-name">Get Yo Paint On! App</p>
 									<div class="collapse eigth enlight-project">
 										<h4>HTML, CSS, Javascript</h4>
 										<a target="_blank" rel="noopener noreferrer" href="https://get-yo-paint-on.netlify.app">https://get-yo-paint-on.netlify.app</a>

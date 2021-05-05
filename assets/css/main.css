@@ -2331,7 +2331,16 @@ input, select, textarea {
 	color: #fdfcfc;
 	box-shadow: 4px 5px 3px rgba(254, 95, 85, 0.7);
 }
-
+.stash-responsibilities {
+	font-size: 9px;
+	margin-bottom: -10px;
+	display: inline-block;
+	margin-left: 10px;
+}
+.stash-plus {
+	margin-left: 20px;
+	font-size: 13px;
+}
 /* Project gallery */
 .gallery { 
 	align-items: center;
